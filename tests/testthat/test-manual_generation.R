@@ -6,7 +6,7 @@ sd <- c(1, 1, 1)
 effect_size <- c(1.5, 0.3, 0)
 
 test_that("assessment_gen creates dataframe", {
-  df <- assessment_gen(Omega, n = 1000, means = means, sd = sd, effect_size)
+  df <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size)
   expect_true(is.data.frame(df))
 })
 
