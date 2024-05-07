@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 ^AssessmentGen\.Rproj$
+=======
+^.*\.Rproj$
+>>>>>>> 9d834adb4c25997a3f3e46d3f2db81d4924c4687
 ^\.Rproj\.user$
 ^LICENSE\.md$
