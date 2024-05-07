@@ -62,3 +62,5 @@ manual_generation <- function(correlation_matrix,
   
   return(Y)
 }
+
+# TODO: Add return error when matrix is not definitive
