@@ -4,7 +4,14 @@
 \alias{manual_generation}
 \title{Assessment Data Generation}
 \usage{
-manual_generation(correlation_matrix, n = 100, means, sd, effect_size)
+manual_generation(
+  correlation_matrix,
+  n = 100,
+  means,
+  sd,
+  effect_size,
+  seed = NULL
+)
 }
 \arguments{
 \item{correlation_matrix}{A square matrix specifying the desired correlations between variables.}
@@ -16,6 +23,8 @@ manual_generation(correlation_matrix, n = 100, means, sd, effect_size)
 \item{sd}{A numeric vector specifying the standard deviation for each variable.}
 
 \item{effect_size}{A numeric vector of effect sizes to simulate adverse impacts between groups.}
+
+\item{seed}{Set the seed for randomness check}
 }
 \value{
 A dataframe of simulated data with columns corresponding to variables and a 'Race' column.
@@ -30,6 +39,6 @@ colnames(Omega) <- name
 means <- c(5, 5, 5)
 sd <- c(1, 1, 1)
 effect_size <- c(1.5, 0.3, 0)
-simulated_data <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size)
+simulated_data <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size, seed = NULL)
 
 }

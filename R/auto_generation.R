@@ -3,16 +3,21 @@
 #' @import readxl
 #' 
 #' @param n The number of observations to generate.
+#' @param seed Set the seed for randomness check
 #' 
 #' @return A dataframe of simulated data with columns corresponding to variables and a 'Race' column.
 #' @export 
 #'
 #' @examples
-#' simulated_data <- auto_generation(n = 100)
+#' simulated_data <- auto_generation(n = 100, seed = NULL)
 
-auto_generation <- function(n = 100){
+auto_generation <- function(n = 100, seed = NULL){
   # Setting seed for reproducibility
-  set.seed(42)
+  if (!is.null(seed)){
+    set.seed(seed)
+  } else {
+    set.seed(sample.int(1000, 1))
+  }
   
   # Define the path to the Excel files within the package
   path_corr <- system.file("extdata", "Correlation.xlsx", package = "AssessmentGen")

@@ -6,6 +6,7 @@
 #' @param means A numeric vector specifying the mean for each variable.
 #' @param sd A numeric vector specifying the standard deviation for each variable.
 #' @param effect_size A numeric vector of effect sizes to simulate adverse impacts between groups.
+#' @param seed Set the seed for randomness check
 #' 
 #' @return A dataframe of simulated data with columns corresponding to variables and a 'Race' column.
 #' @export 
@@ -17,11 +18,18 @@
 #' means <- c(5, 5, 5)
 #' sd <- c(1, 1, 1)
 #' effect_size <- c(1.5, 0.3, 0)
-#' simulated_data <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size)
+#' simulated_data <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size, seed = NULL)
 #' 
-manual_generation <- function(correlation_matrix, n = 100, means, sd, effect_size){
+manual_generation <- function(correlation_matrix, 
+                              n = 100, means, 
+                              sd, effect_size, 
+                              seed = NULL){
   # Setting seed for reproducibility
-  set.seed(42)
+  if (!is.null(seed)){
+    set.seed(seed)
+  } else {
+    set.seed(sample.int(1000, 1))
+  }
   
   # Creating Cholesky matrix
   choleski_matrix <- chol(correlation_matrix)

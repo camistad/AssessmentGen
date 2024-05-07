@@ -4,10 +4,12 @@
 \alias{auto_generation}
 \title{Assessment Data Generation}
 \usage{
-auto_generation(n = 100)
+auto_generation(n = 100, seed = NULL)
 }
 \arguments{
 \item{n}{The number of observations to generate.}
+
+\item{seed}{Set the seed for randomness check}
 }
 \value{
 A dataframe of simulated data with columns corresponding to variables and a 'Race' column.
@@ -16,5 +18,5 @@ A dataframe of simulated data with columns corresponding to variables and a 'Rac
 Assessment Data Generation
 }
 \examples{
-simulated_data <- auto_generation(n = 100)
+simulated_data <- auto_generation(n = 100, seed = NULL)
 }
