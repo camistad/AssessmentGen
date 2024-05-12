@@ -7,12 +7,12 @@ Authors@R: c(person("Bao", role = c("aut", "cre"), email = "bh.baoho@gmail.com")
 Description: This packages aggregate correlation accross meta-analysis and generate assessment data that mirror
   the relationship between these variables. 
 License: MIT + file LICENSE
-Imports: readxl
+Imports: 
+  readxl, 
+  ParetoR
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Suggests:
     testthat
-Imports:
-    ParetoR
-Remotes: Diversity-ParetoOptimal/ParetoR
+Remotes: github::Diversity-ParetoOptimal/ParetoR

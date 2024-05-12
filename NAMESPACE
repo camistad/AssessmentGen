@@ -2,6 +2,8 @@
 
 export(auto_generation)
 export(manual_generation)
+export(songPareto)
+import(ParetoR)
 import(readxl)
 importFrom(stats,rnorm)
 importFrom(stats,runif)
