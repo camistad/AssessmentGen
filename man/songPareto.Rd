@@ -41,6 +41,6 @@ Pareto-optimization graphs and solutions.
 Chelsea Song's Pareto-optimization Procedure
 }
 \examples{
-data <- auto_generation(n = 1000, seed = 42)
+data <- auto_generation(n = 1000, seed = 777)
           songPareto(data, c("Structured Interview", "GMA tests", "Conscientiousness"), sr = .20)
 }
