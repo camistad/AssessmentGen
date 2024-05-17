@@ -60,3 +60,6 @@ auto_generation <- function(n = 100, seed = NULL){
   
   return(Y)
 }
+
+# TODO: include parameter
+# TODO: do banding

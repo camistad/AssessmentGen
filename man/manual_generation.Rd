@@ -42,3 +42,4 @@ effect_size <- c(1.5, 0.3, 0)
 simulated_data <- manual_generation(Omega, n = 1000, means = means, sd = sd, effect_size, seed = NULL)
 
 }
+
